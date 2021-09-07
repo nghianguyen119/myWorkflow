@@ -14,7 +14,7 @@ jobs:
         run: echo ${{ steps.vars.outputs.tag }}
         
       - name: Create GitHub Release
-        if: ${{ steps.vars.outputs.tag != "main" }}
+        if: ${{ steps.vars.outputs.tag != 'main' }}
         id: create_release
         uses: actions/create-release@v1.1.0
         env:
